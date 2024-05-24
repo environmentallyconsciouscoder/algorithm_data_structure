@@ -58,3 +58,16 @@ def combine(arr1: list[int], arr2: list[int]) -> list[int]:
         j += 1
 
     return ans
+
+def isSubsequence(s: str, t: str) -> bool:
+    i = j = 0
+
+    #if they are subsequence then the two arrays should have equal len
+    while i < len(s) and j < len(t):
+        #if i is equal to j then there is a match
+        if s[i] == t[j]:
+            i += 1
+        j += 1
+    return i == len(s)
+
+print("isSubsequence", isSubsequence(["ace"], ["abcde"]))
